@@ -1063,7 +1063,6 @@ class SIPClient:
             + request.headers["CSeq"]["method"]
             + ":sip:"
             + self.server
-            + ";transport=UDP"
         )
         HA2 = hashlib.md5(HA2.encode("utf8")).hexdigest()
         nonce = request.authentication["nonce"]
